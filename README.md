@@ -3,14 +3,13 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 
 ### Association
 - has_many:messages
 - has_many :groups
-- has_many :edits
 
 ## groups_usersテーブル
 
@@ -40,14 +39,10 @@ Column|Type|Options|
 
 Column|Type|Options|
 |------|----|-------|
-|text|text||
-|chat-name|string|null: false,|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
+|name|string|null: false,|
 
 ### Association
-- belongs_to :user
+- has_many :users
 - has_many :messages
 
 
